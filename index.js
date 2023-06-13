@@ -9,6 +9,7 @@ import { postRouter } from "./Routes/post.router.js";
 const app = express()
 const port = process.env.PORT || 4000;
 
+app.use(express.urlenscoded({ extended: true }))
 
 
 app.get("/", (req, res) => {
@@ -21,7 +22,7 @@ app.use(postRouter)
 app.use((req, res, next) => {
     res.status(404).send("Siden blev ikke fundet")
 })
- 
+
 app.listen(4242, () => {
     console.log(`server kører på port ${port}`);
 })

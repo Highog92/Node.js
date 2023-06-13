@@ -7,15 +7,16 @@ postRouter.get('/post', (req, res) => {
 })
 
 postRouter.post('/post', (req, res) => {
-    res.send('Hent alle Post1');
+    console.log(req);
+    res.send('Opretter post');
 })
 
 postRouter.put('/post', (req, res) => {
-    res.send('Hent alle Post2');
+    res.send('Opdater post');
 })
 
 postRouter.delete('/post', (req, res) => {
-    res.send('Hent alle Post3');
+    res.send('Sletter posts');
 })
 
 export { postRouter }
